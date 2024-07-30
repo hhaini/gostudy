@@ -1,0 +1,2 @@
+代码块与作用域：如何保证变量不会被遮蔽?
+变量遮蔽(Variable Shadowing):请参考demo1
