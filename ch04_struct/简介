@@ -1,0 +1,25 @@
+复合数据类型：结构体
+    结构体变量的声明与初始化
+        type Book struct {
+        ...
+        }
+        var book Book
+        var book = Book{}
+        book := Book{}
+
+    零值初始化：var book Book // book为零值结构体变量
+        注意使用零值初始化并不是正确的选择,但是go语言中有一种情况为零值可用，如下：
+            var mu sync.Mutex
+            mu.Lock()
+            mu.Unlock()
+        Go 标准库的设计者很贴心地将 sync.Mutex 结构体的零值状态，设计为可用状态，这样开发者便可直接基于零值状态下的
+        Mutex 进行 lock 与 unlock 操作，而且不需要额外显式地对它进行初始化操作了
+    使用复合字面值
+        type Book struct {
+        Title string // 书名
+        Pages int // 书的页数
+        Indexes map[string]int // 书的索引
+        }
+        var book = Book{"The Go Programming Language", 700, make(map[string]int)}
+    使用特定的构造函数
+        

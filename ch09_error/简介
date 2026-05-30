@@ -1,0 +1,9 @@
+error接口是go语言原生内置的类型，他的定义如下
+type error interface{
+	Error() string
+}
+
+go在标准库中提供了两种方便Go开发者构造错误值的方法：error.New和fmt.Errorf
+	使用这两种方法可以轻松构建出满足error接口的错误值。
+	err := errors.New("your first demo error")
+	errWithCtx = fmt.Errorf("index %d is out of bounds", i)

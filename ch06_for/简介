@@ -1,0 +1,7 @@
+控制结构：for
+    for 循环语句的经典形式
+        var sum int
+        for i := 0; i < 10; i++ {
+        sum += i
+        }
+        println(sum)

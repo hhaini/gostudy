@@ -1,0 +1,34 @@
+package main
+
+//type switch
+// func main() {
+// 	var x interface{} = 13
+// 	switch x.(type) {
+// 	case nil:
+// 		println("x is nil")
+// 	case int:
+// 		println("the type of x is int")
+// 	case string:
+// 		println("the type of x is string")
+// 	case bool:
+// 		println("the type of x is string")
+// 	default:
+// 		println("don't support the type")
+// 	}
+// }
+
+func main() {
+	var x interface{} = 13
+	switch v := x.(type) {
+	// case nil:
+	// 	println("v is nil")
+	case int:
+		println("the type of v is int, v =", v)
+	case string:
+		println("the type of v is string, v =", v)
+	case bool:
+		println("the type of v is bool, v =", v)
+	default:
+		println("don't support the type")
+	}
+}
